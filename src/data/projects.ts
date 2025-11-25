@@ -1,4 +1,7 @@
-
+import FastFoodImage from "../../public/FastFoodAmerican.png"
+import AdVibeImage from "../../public/AdVibe.png"
+import FridgeChefImage from "../../public/fridge-chef.png"
+import CalculatorImage from "../../public/calculator.png"
 
 export interface Project {
     id: number;
@@ -14,7 +17,7 @@ export const projects: Project[] = [
 {
     id: 4,
     title: "FastFood American",
-    image: "/FastFoodAmerican.png",
+    image: FastFoodImage,
     description: "Kompletan Fast Food webshop izgrađen kao Full-Stack MERN aplikacija. Uključuje kompletnu e-commerce funkcionalnost, filtriranje menija, košaricu, checkout proces i sistem administracije korisničkih uloga (Admin, Editor, Viewer). Aplikacija demonstrira razdvajanje usluga s neovisnim API-jem na Renderu i Frontend aplikacijom na Vercelu, osiguravajući stabilan deployment u produkcijskom okruženju.",
     technologies: [
         "React",
@@ -31,7 +34,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "AdVibe",
-    image: "/AdVibe.png", 
+    image: AdVibeImage, 
     description: "Full-stack oglasna platforma izgrađena za dijeljenje i interakciju s reklamama.",
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
     liveUrl: "https://ad-vibe-tau.vercel.app/",
@@ -40,7 +43,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Fridge Chef",
-    image: "/fridge-chef.png",
+    image: FridgeChefImage,
     description: "Full-stack MERN aplikacija za generiranje recepata na temelju sastojaka u hladnjaku. Uključuje registraciju, prijavu i JWT autentifikaciju.",
     technologies: ["React", "JavaScript", "Express.js", "MongoDB", "JWT"],
     liveUrl: "https://fridge-chef-sable.vercel.app/",
@@ -49,7 +52,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Kalkulator",
-    image: "/calculator.png",
+    image: CalculatorImage,
     description: "Jednostavan kalkulator napravljen u Reactu. Demonstrira osnovne React koncepte i JavaScript logiku.",
     technologies: ["React", "JavaScript",],
     liveUrl: "https://calculator-delta-peach-54.vercel.app",

@@ -4,6 +4,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaHome, FaUser, FaFolderOpen } from "react-icons/fa";
 import About from "./components/About/About";
 import MyPortfolio from "./components/MyPortfolio/MyPortfolio";
+import { useState } from "react";
 
 const Navlinks = [
   { path: "#home", label: "Naslovna", icon: FaHome },
@@ -30,6 +31,8 @@ const TypewriterComponent = () => {
 };
 
 const App = () => {
+  const [activeSection] = useState("#home");
+
   return (
     <>
       <div
@@ -41,7 +44,11 @@ const App = () => {
         className="relative min-h-screen"
       >
         <div className="absolute inset-0 opacity-60 pointer-events-none"></div>
-        <Navbar title="Robert Pecolaj" links={Navlinks} />
+        <Navbar
+          title="Robert Pecolaj"
+          links={Navlinks}
+          activeSection={activeSection}
+        />
         <div className="relative z-10">
           <section
             id="home"
