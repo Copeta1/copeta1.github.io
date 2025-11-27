@@ -2,6 +2,7 @@ import FastFoodImage from "../../public/FastFoodAmerican.png"
 import AdVibeImage from "../../public/AdVibe.png"
 import FridgeChefImage from "../../public/fridge-chef.png"
 import CalculatorImage from "../../public/calculator.png"
+import ChatAppImage from "../../public/ChatApp.png"
 
 export interface Project {
     id: number;
@@ -14,6 +15,15 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 5,
+    title: "Chat-App",
+    image: ChatAppImage,
+    description: "Kompletna Full-Stack MERN aplikacija za razmjenu poruka u stvarnom vremenu. Izgrađena s naglaskom na brzinu, sigurnost (JWT autentifikacija) i moderan dizajn. Koristi Socket.IO za trenutnu isporuku poruka, prikaz online statusa i listu korisnika. Idealna platforma za brzu i pouzdanu digitalnu interakciju.",
+    technologies: ["React", "JavaScript", "Tailwind CSS ", "Context API", "Node.js", "Express.js", "MongoDB", "Socket.IO", "JWT",],
+    liveUrl: "https://chat-app-eight-omega-51.vercel.app",
+    githubUrl: "https://github.com/Copeta1/Chat_App",
+  },
 {
     id: 4,
     title: "FastFood American",
