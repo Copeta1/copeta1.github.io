@@ -12,9 +12,17 @@ interface NavbarProps {
   title: string;
   links: NavLink[];
   activeSection: string;
+  currentLang: string;
+  onToggleLanguage: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title, links, activeSection }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  title,
+  links,
+  activeSection,
+  currentLang,
+  onToggleLanguage,
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -58,8 +66,8 @@ const Navbar: React.FC<NavbarProps> = ({ title, links, activeSection }) => {
           const isActive = activeSection === link.path;
 
           const linkClasses = isActive
-            ? "text-white bg-indigo-700 font-bold shadow-lg shadow-indigo-500/50" // Aktivno stanje
-            : "text-indigo-400 hover:bg-indigo-700 hover:bg-opacity-20 hover:text-white font-medium"; // Neaktivno stanje
+            ? "text-white bg-indigo-700 font-bold shadow-lg shadow-indigo-500/50"
+            : "text-indigo-400 hover:bg-indigo-700 hover:bg-opacity-20 hover:text-white font-medium";
 
           return (
             <li key={link.path}>
@@ -74,6 +82,15 @@ const Navbar: React.FC<NavbarProps> = ({ title, links, activeSection }) => {
             </li>
           );
         })}
+
+        <li>
+          <button
+            onClick={onToggleLanguage}
+            className="ml-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs md:text-sm font-bold px-3 py-1.5 rounded-md border border-indigo-400/50 transition duration-300 uppercase shadow-md"
+          >
+            {currentLang === "hr" ? "EN" : "HR"}
+          </button>
+        </li>
       </ul>
     </nav>
   );

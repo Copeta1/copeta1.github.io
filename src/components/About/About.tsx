@@ -1,12 +1,14 @@
 import React from "react";
 import ProfilePic from "../../assets/me.jpg";
 import CV from "../../assets/CV.pdf";
+import CV_ENG from "../../assets/CV_ENG.pdf";
 import { FaGitAlt, FaGithub, FaFigma } from "react-icons/fa";
 import { SiXcode, SiAdobephotoshop } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { type IconType } from "react-icons";
 import SkillCard from "./SkillCard";
 import Skills from "./Skills";
+import { useTranslation } from "react-i18next";
 
 interface Skill {
   Icon: IconType;
@@ -23,6 +25,12 @@ const SKILLS: Skill[] = [
 ];
 
 const About: React.FC = () => {
+  const { t, i18n } = useTranslation();
+
+  const currentCV = i18n.language === "hr" ? CV : CV_ENG;
+  const downloadName =
+    i18n.language === "hr" ? "RobertPecolaj_CV_HR" : "RobertPecolaj_CV_EN";
+
   return (
     <section
       id="about"
@@ -43,36 +51,30 @@ const About: React.FC = () => {
             {/* DESNO */}
             <div className="md:w-2/3 text-center">
               <h3 className="text-3xl font-bold text-indigo-400 mb-4">
-                Robert Pecolaj | Frontend & Mobile Developer & Multimedijski
-                Stručnjak
+                {t("about_title")}
               </h3>
 
               <p className="text-lg mb-6 text-center">
-                Diplomirani sam inženjer Multimedije sa Sveučilišta Sjever,
-                posvećen kreiranju modernih, funkcionalnih i vizualno privlačnih
-                digitalnih rješenja. Kombiniram formalno obrazovanje iz
-                multimedije i estetike dizajna s intenzivnim fokusom na Frontend
-                i Mobile Developer ulogu, što mi omogućuje da s lakoćom
-                povezujem dizajn i funkcionalnost.
+                {t("about_description")}
               </p>
               <div className="mt-8 pt-2">
                 <a
-                  href={CV}
-                  download="RobertPecolaj_CV"
+                  href={currentCV}
+                  download={downloadName}
                   className="inline-block bg-indigo-600 text-white text-lg font-bold transition duration-300 
                                        px-8 py-3 rounded-lg shadow-xl hover:bg-indigo-700 transform hover:scale-105"
                 >
-                  Preuzmi moj CV
+                  {t("about_button")}
                 </a>
               </div>
             </div>
           </div>
           <div className="mt-24 text-center">
             <h3 className="text-5xl font-bold text-indigo-400">
-              ALATI I VJEŠTINE
+              {t("tools_skills_title")}
             </h3>
             <h4 className="text-3xl font-semibold text-indigo-400 mt-12">
-              Alati
+              {t("tools_subtitle")}
             </h4>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {SKILLS.map((Skill) => (
@@ -85,7 +87,7 @@ const About: React.FC = () => {
             </div>
 
             <h4 className=" text-3xl font-semibold text-indigo-400 mt-12">
-              Vještine
+              {t("skills_subtitle")}
             </h4>
           </div>
 

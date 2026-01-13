@@ -5,12 +5,7 @@ import { FaHome, FaUser, FaFolderOpen } from "react-icons/fa";
 import About from "./components/About/About";
 import MyPortfolio from "./components/MyPortfolio/MyPortfolio";
 import { useState } from "react";
-
-const Navlinks = [
-  { path: "#home", label: "Naslovna", icon: FaHome },
-  { path: "#about", label: "O Meni", icon: FaUser },
-  { path: "#projects", label: "Projekti", icon: FaFolderOpen },
-];
+import { useTranslation } from "react-i18next";
 
 const TypewriterComponent = () => {
   const [text] = useTypewriter({
@@ -32,6 +27,18 @@ const TypewriterComponent = () => {
 
 const App = () => {
   const [activeSection] = useState("#home");
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === "hr" ? "en" : "hr";
+    i18n.changeLanguage(nextLang);
+  };
+
+  const Navlinks = [
+    { path: "#home", label: t("nav_home"), icon: FaHome },
+    { path: "#about", label: t("nav_about"), icon: FaUser },
+    { path: "#projects", label: t("nav_projects"), icon: FaFolderOpen },
+  ];
 
   return (
     <>
@@ -48,6 +55,8 @@ const App = () => {
           title="Robert Pecolaj"
           links={Navlinks}
           activeSection={activeSection}
+          currentLang={i18n.language}
+          onToggleLanguage={toggleLanguage}
         />
         <div className="relative z-10">
           <section
@@ -57,11 +66,7 @@ const App = () => {
             <div className="relative z-10 text-center max-w-4xl">
               <TypewriterComponent />
               <div className="mt-8 text-xl">
-                <p>
-                  Kao Full-Stack Developer, koristim snagu MERN stacka, React.js
-                  i React Native-a za izgradnju modernih web stranica i mobilnih
-                  aplikacija.
-                </p>
+                <p>{t("hero_desc")}</p>
               </div>
               <div className="py-8">
                 <a
@@ -69,7 +74,7 @@ const App = () => {
                   className="inline-block bg-indigo-600 text-white text-lg font-bold transition duration-300 
                      px-8 py-3 rounded-lg shadow-xl hover:bg-indigo-700 transform hover:scale-105"
                 >
-                  Pročitajte više
+                  {t("hero_button")}
                 </a>
               </div>
             </div>

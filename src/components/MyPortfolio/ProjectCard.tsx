@@ -1,32 +1,38 @@
 import React from "react";
 import { type Project } from "../../data/projects";
 import { FaGlobe, FaCode } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const ButtonGroup: React.FC<{ liveUrl: string; githubUrl: string }> = ({
   liveUrl,
   githubUrl,
-}) => (
-  <div className="flex space-x-3 mb-4 mt-auto">
-    <a
-      href={liveUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center px-4 py-2 text-white bg-green-600 rounded-md font-semibold text-sm transition duration-300 hover:bg-green-700"
-    >
-      <FaGlobe className="mr-2" /> Demo
-    </a>
-    <a
-      href={githubUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center px-4 py-2 text-white bg-gray-800 rounded-md font-semibold text-sm transition duration-300 hover:bg-gray-700 border border-gray-600"
-    >
-      <FaCode className="mr-2" /> Kod
-    </a>
-  </div>
-);
+}) => {
+  const { t } = useTranslation();
+  return (
+    <div className="flex space-x-3 mb-4 mt-auto">
+      <a
+        href={liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center px-4 py-2 text-white bg-green-600 rounded-md font-semibold text-sm transition duration-300 hover:bg-green-700"
+      >
+        <FaGlobe className="mr-2" /> Demo
+      </a>
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center px-4 py-2 text-white bg-gray-800 rounded-md font-semibold text-sm transition duration-300 hover:bg-gray-700 border border-gray-600"
+      >
+        <FaCode className="mr-2" /> {t("projects_button")}
+      </a>
+    </div>
+  );
+};
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
       <div className="w-full h-48 overflow-hidden">
@@ -39,7 +45,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
       <div className="p-4 flex flex-col grow">
         <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-        <p className="text-gray-400 text-sm mb-4 grow">{project.description}</p>
+        <p className="text-gray-400 text-sm mb-4 grow">
+          {t(project.description)}
+        </p>
 
         <ButtonGroup liveUrl={project.liveUrl} githubUrl={project.githubUrl} />
 
