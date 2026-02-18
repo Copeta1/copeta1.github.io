@@ -3,6 +3,7 @@ import AdVibeImage from "../../public/AdVibe.png"
 import FridgeChefImage from "../../public/fridge-chef.png"
 import CalculatorImage from "../../public/calculator.png"
 import ChatAppImage from "../../public/ChatApp.png"
+import RentlQImage from "../../public/RentlQImage.png"
 
 export interface Project {
     id: number;
@@ -15,6 +16,24 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+   {
+    id: 6,
+    title: "RentlQ",
+    image: RentlQImage,
+    description: "projects_rentlq_desc",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Appwrite",
+      "Recharts",
+      "Shadcn/ui",
+      "Papaparse",
+    ],
+    liveUrl: "https://rentl-q.vercel.app",
+    githubUrl: "https://github.com/Copeta1/RentlQ",
+  },
   {
     id: 5,
     title: "Chat-App",

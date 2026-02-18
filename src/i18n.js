@@ -42,6 +42,8 @@ i18n
           projects_calculator_desc:
             "A simple calculator built in React. Demonstrates basic React concepts and JavaScript logic.",
           projects_button: "Code",
+          projects_rentlq_desc:
+            "Apartment analytics dashboard for rental property owners. Upload CSV data from Booking.com/Airbnb, track revenue, occupancy rates, and manage reservations in one centralized platform.",
         },
       },
       hr: {
@@ -77,6 +79,8 @@ i18n
           projects_calculator_desc:
             "Jednostavan kalkulator napravljen u Reactu. Demonstrira osnovne React koncepte i JavaScript logiku.",
           projects_button: "Kod",
+          projects_rentlq_desc:
+            "Nadzorna ploča za analitiku apartmana za vlasnike nekretnina za najam. Prenesite CSV podatke s Booking.com/Airbnb, pratite prihode, stope popunjenosti i upravljajte rezervacijama na jednoj centraliziranoj platformi.",
         },
       },
     },
