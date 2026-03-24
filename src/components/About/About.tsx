@@ -1,7 +1,7 @@
 import React from "react";
 import ProfilePic from "../../assets/me.jpg";
-import CV from "../../assets/CV.pdf";
-import CV_ENG from "../../assets/CV_ENG.pdf";
+import CV from "../../assets/CV_HR.pdf";
+import CV_ENG from "../../assets/CV-ENG.pdf";
 import { FaGitAlt, FaGithub, FaFigma } from "react-icons/fa";
 import { SiXcode, SiAdobephotoshop } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
