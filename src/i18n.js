@@ -44,6 +44,8 @@ i18n
           projects_button: "Code",
           projects_rentlq_desc:
             "Apartment analytics dashboard for rental property owners. Upload CSV data from Booking.com/Airbnb, track revenue, occupancy rates, and manage reservations in one centralized platform.",
+          projects_cvhelper_desc:
+            "AI-powered resume builder and optimizer. Enter your career details, let AI analyze your CV, receive concrete improvement suggestions, ATS-optimized keywords, and a polished professional summary — all in one platform.",
         },
       },
       hr: {
@@ -81,6 +83,8 @@ i18n
           projects_button: "Kod",
           projects_rentlq_desc:
             "Nadzorna ploča za analitiku apartmana za vlasnike nekretnina za najam. Prenesite CSV podatke s Booking.com/Airbnb, pratite prihode, stope popunjenosti i upravljajte rezervacijama na jednoj centraliziranoj platformi.",
+          projects_cvhelper_desc:
+            "AI alat za izradu i optimizaciju životopisa. Unesite podatke o svom karijernom putu, pustite AI da analizira vaš CV, dobijete konkretne sugestije za poboljšanje, ključne riječi za ATS sustave i optimizirani profesionalni summary - sve na jednoj platformi.",
         },
       },
     },

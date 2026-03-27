@@ -4,6 +4,7 @@ import FridgeChefImage from "../../public/fridge-chef.png"
 import CalculatorImage from "../../public/calculator.png"
 import ChatAppImage from "../../public/ChatApp.png"
 import RentlQImage from "../../public/RentlQImage.png"
+import CvHelper from "../../public/CvHelper.jpeg"
 
 export interface Project {
     id: number;
@@ -16,6 +17,25 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+  id: 7,
+    title: "CvHelper",
+    image: CvHelper,
+    description: "projects_cvhelper_desc",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Row Level Security",
+      "Shadcn/ui",
+      "Lucide React",
+      "Puter.js,"
+    ],
+    liveUrl: "https://cv-helper-silk.vercel.app/",
+    githubUrl: "https://github.com/Copeta1/CvHelper",
+  },
    {
     id: 6,
     title: "RentlQ",

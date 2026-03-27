@@ -39,7 +39,7 @@ const ALL_SKILLS: SkillDetail[] = [
     Icon: BiLogoTypescript,
   },
   { name: "React.js", level: 80, category: "Frontend", Icon: FaReact },
-  { name: "Next.js", level: 60, category: "Frontend", Icon: RiNextjsFill },
+  { name: "Next.js", level: 80, category: "Frontend", Icon: RiNextjsFill },
   {
     name: "Tailwind CSS",
     level: 85,
@@ -91,7 +91,7 @@ const Skills: React.FC = () => {
     useState<SkillDetail["category"]>("Frontend");
 
   const filteredSkills = ALL_SKILLS.filter(
-    (skill) => skill.category === activeFilter
+    (skill) => skill.category === activeFilter,
   );
 
   const getButtonClasses = (filter: SkillDetail["category"]) => {
