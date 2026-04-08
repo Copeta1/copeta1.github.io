@@ -64,7 +64,7 @@ const ALL_SKILLS: SkillDetail[] = [
   },
   {
     name: "React Native",
-    level: 65,
+    level: 85,
     category: "General",
     Icon: TbBrandReactNative,
   },

@@ -5,6 +5,7 @@ import CalculatorImage from "../../public/calculator.png"
 import ChatAppImage from "../../public/ChatApp.png"
 import RentlQImage from "../../public/RentlQImage.png"
 import CvHelper from "../../public/CvHelper.jpeg"
+import UGraduImage from "../../public/UGraduImage.png"
 
 export interface Project {
     id: number;
@@ -17,6 +18,24 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+  id: 8,
+  title: "UGradu",
+  image: UGraduImage,
+  description: "projects_ugradu_desc",
+  technologies: [
+    "React Native",
+    "Expo",
+    "TypeScript",
+    "NativeWind",
+    "Firebase Auth",
+    "Firestore",
+    "Zustand",
+    "Expo Router",
+  ],
+  liveUrl: "https://youtube.com/shorts/VTNw3jQ77XY?feature=share",
+  githubUrl: "https://github.com/Copeta1/UGradu",
+},
   {
   id: 7,
     title: "CvHelper",
