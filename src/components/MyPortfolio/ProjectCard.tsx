@@ -39,6 +39,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <img
           src={project.image}
           alt={project.title}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>

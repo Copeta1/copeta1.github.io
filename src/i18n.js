@@ -48,6 +48,11 @@ i18n
             "AI-powered resume builder and optimizer. Enter your career details, let AI analyze your CV, receive concrete improvement suggestions, ATS-optimized keywords, and a polished professional summary — all in one platform.",
           projects_ugradu_desc:
             "UGradu is a mobile app for discovering local events in Croatian cities. Browse events, filter by city, save favourites, and get push notifications. Features an interactive map with event pins and user authentication. Built with React Native, Expo, NativeWind and Firebase.",
+          nav_contact: "Contact",
+          contact_title: "Get In Touch",
+          contact_desc:
+            "Open to freelance projects and full-time opportunities. Feel free to reach out!",
+          contact_button: "Say Hello",
         },
       },
       hr: {
@@ -89,6 +94,11 @@ i18n
             "AI alat za izradu i optimizaciju životopisa. Unesite podatke o svom karijernom putu, pustite AI da analizira vaš CV, dobijete konkretne sugestije za poboljšanje, ključne riječi za ATS sustave i optimizirani profesionalni summary - sve na jednoj platformi.",
           projects_ugradu_desc:
             "UGradu je mobilna aplikacija za otkrivanje lokalnih događanja u hrvatskim gradovima. Pregledavajte događanja, filtrirajte po gradu, spremajte favorite i primajte push obavijesti. Sadrži interaktivnu kartu s oznakama događanja i autentifikacijom korisnika. Izrađena s React Native, Expo, NativeWind i Firebase.",
+          nav_contact: "Kontakt",
+          contact_title: "Kontaktiraj me",
+          contact_desc:
+            "Otvoren za freelance projekte i stalno zaposlenje. Slobodno se javi!",
+          contact_button: "Pošalji poruku",
         },
       },
     },

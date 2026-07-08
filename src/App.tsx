@@ -1,15 +1,24 @@
 import Navbar from "./components/Navbar/Navbar";
 import BackgroundImage from "./assets/bg.jpg";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaHome, FaUser, FaFolderOpen } from "react-icons/fa";
+import {
+  FaHome,
+  FaUser,
+  FaFolderOpen,
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 import About from "./components/About/About";
 import MyPortfolio from "./components/MyPortfolio/MyPortfolio";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const TypewriterComponent = () => {
   const [text] = useTypewriter({
-    words: ["Robert Pecolaj", "A Web Designer", "A Software Developer"],
+    words: ["Robert Pecolaj", "A Full-Stack Developer", "A Mobile Developer"],
     loop: true,
     typeSpeed: 120,
     deleteSpeed: 60,
@@ -26,8 +35,27 @@ const TypewriterComponent = () => {
 };
 
 const App = () => {
-  const [activeSection] = useState("#home");
+  const [activeSection, setActiveSection] = useState("#home");
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const section = ["home", "about", "projects", "contact"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    section.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
   const toggleLanguage = () => {
     const nextLang = i18n.language === "hr" ? "en" : "hr";
@@ -38,6 +66,7 @@ const App = () => {
     { path: "#home", label: t("nav_home"), icon: FaHome },
     { path: "#about", label: t("nav_about"), icon: FaUser },
     { path: "#projects", label: t("nav_projects"), icon: FaFolderOpen },
+    { path: "#contact", label: t("nav_contact"), icon: FaEnvelope },
   ];
 
   return (
@@ -77,12 +106,34 @@ const App = () => {
                   {t("hero_button")}
                 </a>
               </div>
+              <div className="flex justify-center gap-6">
+                <a
+                  href="https://github.com/Copeta1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-indigo-400 transition duration-300"
+                >
+                  <FaGithub className="text-3xl" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/robert-pecolaj-15a1351a2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-indigo-400 transition duration-300"
+                >
+                  <FaLinkedin className="text-3xl" />
+                </a>
+              </div>
             </div>
           </section>
 
           <About />
 
           <MyPortfolio />
+
+          <Contact />
+
+          <Footer />
         </div>
       </div>
     </>

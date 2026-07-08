@@ -54,7 +54,7 @@ const About: React.FC = () => {
                 {t("about_title")}
               </h3>
 
-              <p className="text-lg mb-6 text-center">
+              <p className="text-lg mb-6 text-center md:text-left">
                 {t("about_description")}
               </p>
               <div className="mt-8 pt-2">

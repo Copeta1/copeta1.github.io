@@ -6,12 +6,18 @@ import {
   FaCss3Alt,
   FaBootstrap,
   FaNodeJs,
-  FaRegWindowMaximize,
+  FaGithub,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
-import { SiVite, SiExpress, SiMysql, SiMongodb } from "react-icons/si";
+import {
+  SiVite,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiDotnet,
+} from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { type IconType } from "react-icons";
 
@@ -28,46 +34,47 @@ const ALL_SKILLS: SkillDetail[] = [
   { name: "CSS3", level: 88, category: "Frontend", Icon: FaCss3Alt },
   {
     name: "JavaScript",
-    level: 75,
+    level: 85,
     category: "Frontend",
     Icon: IoLogoJavascript,
   },
   {
     name: "TypeScript",
-    level: 65,
+    level: 80,
     category: "Frontend",
     Icon: BiLogoTypescript,
   },
-  { name: "React.js", level: 80, category: "Frontend", Icon: FaReact },
-  { name: "Next.js", level: 80, category: "Frontend", Icon: RiNextjsFill },
+  { name: "React.js", level: 90, category: "Frontend", Icon: FaReact },
+  { name: "Next.js", level: 90, category: "Frontend", Icon: RiNextjsFill },
   {
     name: "Tailwind CSS",
-    level: 85,
+    level: 90,
     category: "Frontend",
     Icon: RiTailwindCssFill,
   },
-  { name: "Bootstrap", level: 70, category: "Frontend", Icon: FaBootstrap },
-  { name: "Vite", level: 75, category: "Frontend", Icon: SiVite },
+  { name: "Bootstrap", level: 75, category: "Frontend", Icon: FaBootstrap },
+  { name: "Vite", level: 80, category: "Frontend", Icon: SiVite },
 
   // BACKEND
-  { name: "Node.js", level: 60, category: "Backend", Icon: FaNodeJs },
-  { name: "Express.js", level: 55, category: "Backend", Icon: SiExpress },
-  { name: "MongoDB", level: 50, category: "Backend", Icon: SiMongodb },
-  { name: "MySQL", level: 45, category: "Backend", Icon: SiMysql },
+  { name: "Node.js", level: 75, category: "Backend", Icon: FaNodeJs },
+  { name: "Express.js", level: 70, category: "Backend", Icon: SiExpress },
+  { name: "MongoDB", level: 60, category: "Backend", Icon: SiMongodb },
+  { name: "MySQL", level: 50, category: "Backend", Icon: SiMysql },
 
-  // GENERALNO/WEB DEVELOPMENT
+  // GENERALNO
   {
     name: "Git & GitHub",
-    level: 80,
+    level: 90,
     category: "General",
-    Icon: FaRegWindowMaximize,
+    Icon: FaGithub,
   },
   {
     name: "React Native",
-    level: 85,
+    level: 90,
     category: "General",
     Icon: TbBrandReactNative,
   },
+  { name: ".NET / C#", level: 30, category: "Backend", Icon: SiDotnet },
 ];
 
 interface SkillButton {

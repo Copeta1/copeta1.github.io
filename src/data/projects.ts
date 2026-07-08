@@ -50,7 +50,7 @@ export const projects: Project[] = [
       "Row Level Security",
       "Shadcn/ui",
       "Lucide React",
-      "Puter.js,"
+      "Puter.js",
     ],
     liveUrl: "https://cv-helper-silk.vercel.app/",
     githubUrl: "https://github.com/Copeta1/CvHelper",
