@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({
     <nav className={`fixed top-0 w-full z-50 text-white ${navbarClasses}`}>
       <div className="flex justify-between items-center py-6 px-10">
         <div className="text-2xl font-semibold text-indigo-400">
-          <h1>{title}</h1>
+          <p>{title}</p>
         </div>
 
         <ul className="hidden md:flex space-x-6 items-center">
@@ -77,6 +77,9 @@ const Navbar: React.FC<NavbarProps> = ({
           <li>
             <button
               onClick={onToggleLanguage}
+              aria-label={
+                currentLang === "hr" ? "Switch to English" : "Prebaci na hrvatski"
+              }
               className="ml-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3 py-1.5 rounded-md border border-indigo-400/50 transition duration-300 uppercase shadow-md"
             >
               {currentLang === "hr" ? "EN" : "HR"}
@@ -86,6 +89,8 @@ const Navbar: React.FC<NavbarProps> = ({
 
         <button
           onClick={() => setIsMenuOpen((p) => !p)}
+          aria-label={isMenuOpen ? "Zatvori izbornik" : "Otvori izbornik"}
+          aria-expanded={isMenuOpen}
           className="md:hidden text-indigo-400 p-1"
         >
           {isMenuOpen ? "✕" : "☰"}

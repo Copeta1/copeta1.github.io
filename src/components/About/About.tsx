@@ -34,34 +34,36 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative flex items-center justify-center p-10 py-20 text-white"
+      className="relative flex items-center justify-center py-20 px-6 md:px-10 text-white"
     >
       <div className="max-w-6xl w-full">
         <div className="text-white">
-          <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col md:flex-row items-start gap-12">
             {/* LIJEVO */}
             <div className="md:w-1/3 flex justify-center mt-6 md:mt-0">
               <img
                 src={ProfilePic}
                 alt="Robert Pecolaj - Profilna slika"
-                className="rounded-xl shadow-2xl w-full max-w-sm"
+                className="rounded-xl shadow-2xl ring-2 ring-indigo-500/30 w-full max-w-sm"
               />
             </div>
 
             {/* DESNO */}
-            <div className="md:w-2/3 text-center">
-              <h3 className="text-3xl font-bold text-indigo-400 mb-4">
+            <div className="md:w-2/3 text-center bg-gray-900/60 border border-white/10 rounded-2xl shadow-2xl p-8 md:p-10">
+              <h2 className="text-4xl font-bold text-indigo-400 mb-4">
                 {t("about_title")}
-              </h3>
+              </h2>
 
-              <p className="text-lg mb-6 text-center md:text-left">
-                {t("about_description")}
-              </p>
+              <div className="space-y-4 mb-6 text-center md:text-left">
+                <p className="text-lg">{t("about_description_1")}</p>
+                <p className="text-lg">{t("about_description_2")}</p>
+                <p className="text-lg">{t("about_description_3")}</p>
+              </div>
               <div className="mt-8 pt-2">
                 <a
                   href={currentCV}
                   download={downloadName}
-                  className="inline-block bg-indigo-600 text-white text-lg font-bold transition duration-300 
+                  className="inline-block bg-indigo-600 text-white text-lg font-bold transition duration-300
                                        px-8 py-3 rounded-lg shadow-xl hover:bg-indigo-700 transform hover:scale-105"
                 >
                   {t("about_button")}
@@ -70,12 +72,12 @@ const About: React.FC = () => {
             </div>
           </div>
           <div className="mt-24 text-center">
-            <h3 className="text-5xl font-bold text-indigo-400">
+            <h2 className="text-4xl font-bold text-indigo-400">
               {t("tools_skills_title")}
-            </h3>
-            <h4 className="text-3xl font-semibold text-indigo-400 mt-12">
+            </h2>
+            <h3 className="text-3xl font-semibold text-indigo-400 mt-12">
               {t("tools_subtitle")}
-            </h4>
+            </h3>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {SKILLS.map((Skill) => (
                 <SkillCard
@@ -86,9 +88,9 @@ const About: React.FC = () => {
               ))}
             </div>
 
-            <h4 className=" text-3xl font-semibold text-indigo-400 mt-12">
+            <h3 className=" text-3xl font-semibold text-indigo-400 mt-12">
               {t("skills_subtitle")}
-            </h4>
+            </h3>
           </div>
 
           <Skills />

@@ -14,11 +14,19 @@ const Contact: React.FC = () => {
         <p className="text-lg text-gray-300 mb-10">{t("contact_desc")}</p>
         <a
           href="mailto:pecolajrobert1@gmail.com"
-          className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-bold px-10 py-4 rounded-lg shadow-xl transition duration-300 transform hover:scale-105 mb-10"
+          className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-bold px-10 py-4 rounded-lg shadow-xl transition duration-300 transform hover:scale-105 mb-4"
         >
           <FaEnvelope className="inline mr-2 mb-1" />
           {t("contact_button")}
         </a>
+        <p className="text-gray-300 mb-10">
+          <a
+            href="mailto:pecolajrobert1@gmail.com"
+            className="hover:text-white transition duration-300"
+          >
+            pecolajrobert1@gmail.com
+          </a>
+        </p>
         <div className="flex justify-center gap-8 mt-4">
           <a
             href="https://github.com/Copeta1"

@@ -34,7 +34,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+    <div className="flex flex-col bg-gray-800 border border-white/10 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-indigo-500/40">
       <div className="w-full h-48 overflow-hidden">
         <img
           src={project.image}

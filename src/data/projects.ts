@@ -6,6 +6,7 @@ import ChatAppImage from "../../public/ChatApp.png"
 import RentlQImage from "../../public/RentlQImage.png"
 import CvHelper from "../../public/CvHelper.jpeg"
 import UGraduImage from "../../public/UGraduImage.png"
+import BookEasyImage from "../../public/BookEasyImage.jpeg"
 
 export interface Project {
     id: number;
@@ -18,6 +19,24 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+  id: 9,
+  title: "BookEasy",
+  image: BookEasyImage,
+  description: "projects_bookeasy_desc",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "ASP.NET Core",
+    "Entity Framework Core",
+    "PostgreSQL",
+    "JWT",
+    "Recharts",
+  ],
+  liveUrl: "https://book-easy-six.vercel.app",
+  githubUrl: "https://github.com/Copeta1/BookEasy",
+},
   {
   id: 8,
   title: "UGradu",

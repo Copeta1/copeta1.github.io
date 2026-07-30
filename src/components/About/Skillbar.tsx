@@ -15,7 +15,7 @@ const getLabel = (level: number): string => {
 
 const Skillbar: React.FC<SkillbarProps> = ({ name, level, Icon }) => {
   return (
-    <div className="p-4 bg-gray-800 bg-opacity-80 rounded-lg shadow-xl">
+    <div className="p-4 bg-gray-800 bg-opacity-80 border border-white/10 rounded-lg shadow-xl">
       <div className="flex items-center gap-2">
         <Icon className="text-2xl text-indigo-400" />
         <span className="text-md font-semibold text-white">{name}</span>

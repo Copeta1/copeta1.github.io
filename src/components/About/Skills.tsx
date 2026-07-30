@@ -7,6 +7,9 @@ import {
   FaBootstrap,
   FaNodeJs,
   FaGithub,
+  FaWordpress,
+  FaPhp,
+  FaPaintBrush,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
@@ -17,6 +20,8 @@ import {
   SiMysql,
   SiMongodb,
   SiDotnet,
+  SiElementor,
+  SiWoocommerce,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { type IconType } from "react-icons";
@@ -24,7 +29,7 @@ import { type IconType } from "react-icons";
 interface SkillDetail {
   name: string;
   level: number;
-  category: "Frontend" | "Backend" | "General";
+  category: "Frontend" | "Backend" | "General" | "WordPress";
   Icon: IconType;
 }
 
@@ -75,6 +80,18 @@ const ALL_SKILLS: SkillDetail[] = [
     Icon: TbBrandReactNative,
   },
   { name: ".NET / C#", level: 30, category: "Backend", Icon: SiDotnet },
+
+  // WORDPRESS
+  { name: "WordPress", level: 90, category: "WordPress", Icon: FaWordpress },
+  { name: "Elementor", level: 88, category: "WordPress", Icon: SiElementor },
+  {
+    name: "WooCommerce",
+    level: 80,
+    category: "WordPress",
+    Icon: SiWoocommerce,
+  },
+  { name: "OceanWP", level: 75, category: "WordPress", Icon: FaPaintBrush },
+  { name: "PHP", level: 45, category: "WordPress", Icon: FaPhp },
 ];
 
 interface SkillButton {
@@ -84,6 +101,7 @@ interface SkillButton {
 
 const SKILL_BUTTONS: SkillButton[] = [
   { label: "Front-end", filter: "Frontend" },
+  { label: "WordPress", filter: "WordPress" },
   { label: "Back-end", filter: "Backend" },
   { label: "General", filter: "General" },
 ];
