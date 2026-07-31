@@ -99,44 +99,44 @@ i18n
           nav_home: "Naslovna",
           hero_greeting: "Bok, ja sam  ",
           hero_word_role1: "Full-Stack Developer",
-          hero_word_role2: "Mobilni Developer",
+          hero_word_role2: "Mobile Developer",
           hero_desc:
-            "Full-stack developer iz Zagreba. WordPress i Elementor, Next.js i React. Primam podizvođački posao za agencije — trenutno slobodan.",
+            "Full-stack developer iz Zagreba. WordPress i Elementor, Next.js i React. Trenutno sam slobodan i primam podizvođačke poslove za agencije.",
           hero_button: "Saznaj više",
           hero_email_label: "Pošalji mi mail",
 
           about_title: "Robert Pecolaj | Full-Stack Developer za agencije",
           about_description_1:
-            "Full-stack developer s diplomom inženjera multimedije. Zadnje četiri godine vodio sam web i digitalni marketing za poslovne stranice — od WordPress redizajna do GA4, SEO-a i kampanja.",
+            "Full-stack developer s diplomom inženjera multimedije. Zadnje četiri godine vodio sam web i digitalni marketing za poslovne stranice, od WordPress redizajna do GA4, SEO-a i kampanja.",
           about_description_2:
-            "Radim i moderni stack: Next.js, TypeScript, React Native, .NET. Ta kombinacija znači da mogu preuzeti i održavanje postojećeg WordPress sitea i izradu nečeg novog od nule.",
+            "Radim i moderni stack: Next.js, TypeScript, React Native, .NET. Ta kombinacija znači da mogu preuzeti održavanje postojećeg WordPress sitea, ali i izraditi nešto novo od nule.",
           about_description_3:
             "Agencijama sam koristan kad im zafali ruku ili kad projekt traži nekoga tko pokriva i jedno i drugo.",
-          about_button: "Preuzmi Moj CV",
+          about_button: "Preuzmi moj CV",
           tools_skills_title: "ALATI I VJEŠTINE",
           tools_subtitle: "Alati",
           skills_subtitle: "Vještine",
 
           experience_title: "Iskustvo",
           experience_intro:
-            "Vodio sam web i digitalni marketing za četiri poslovne stranice — od redizajna do svakodnevnog održavanja.",
+            "Vodio sam web i digitalni marketing za četiri poslovne stranice, od redizajna do svakodnevnog održavanja.",
           experience_bullet_1:
             "Redizajn i održavanje četiri WordPress sitea (OceanWP, Elementor, WooCommerce)",
           experience_bullet_2:
             "Postavljanje GA4, Search Consolea i Site Kita na svim stranicama, uz centralizirano izvještavanje",
           experience_bullet_3:
-            "Tehnički SEO — robots.txt, 301 redirekcije, Yoast, ispravci strukture i indeksiranja",
+            "Tehnički SEO: robots.txt, 301 redirekcije, Yoast, ispravci strukture i indeksiranja",
           experience_bullet_4:
             "Custom widgeti i prilagodbe teme izvan mogućnosti buildera",
           experience_bullet_5: "Kampanje: Google Ads, Meta Ads, Mailchimp",
           experience_footer: "Reference i primjeri dostupni na upit.",
 
-          projects_title: "Moji Projekti",
+          projects_title: "Moji projekti",
           projects_intro:
-            "Osobni projekti — Next.js, TypeScript, .NET, React Native.",
-          projects_sub_title: "Napomena o Demo Verziji i Učitavanju Servera",
+            "Osobni projekti: Next.js, TypeScript, .NET, React Native.",
+          projects_sub_title: "Napomena o demo verziji i učitavanju servera",
           projects_description:
-            "Prvi pokušaj prijave ili interakcije s aplikacijom nakon dulje pauze može potrajati 15 do 30 sekundi dok se Back-end server ponovno pokrene. Molimo Vas za strpljenje. Nakon tog prvog pokretanja, aplikacija će raditi normalnom brzinom.",
+            "Prvi pokušaj prijave ili interakcije s aplikacijom nakon dulje pauze može potrajati 15 do 30 sekundi dok se server ponovno pokrene. Molimo Vas za strpljenje. Nakon tog prvog pokretanja, aplikacija će raditi normalnom brzinom.",
           projects_chat_app_desc:
             "Kompletna Full-Stack MERN aplikacija za razmjenu poruka u stvarnom vremenu. Izgrađena s naglaskom na brzinu, sigurnost (JWT autentifikacija) i moderan dizajn. Koristi Socket.IO za trenutnu isporuku poruka, prikaz online statusa i listu korisnika. Idealna platforma za brzu i pouzdanu digitalnu interakciju.",
           projects_fastfood_desc:
@@ -151,7 +151,7 @@ i18n
           projects_rentlq_desc:
             "Nadzorna ploča za analitiku apartmana za vlasnike nekretnina za najam. Prenesite CSV podatke s Booking.com/Airbnb, pratite prihode, stope popunjenosti i upravljajte rezervacijama na jednoj centraliziranoj platformi.",
           projects_cvhelper_desc:
-            "AI alat za izradu i optimizaciju životopisa. Unesite podatke o svom karijernom putu, pustite AI da analizira vaš CV, dobijete konkretne sugestije za poboljšanje, ključne riječi za ATS sustave i optimizirani profesionalni summary - sve na jednoj platformi.",
+            "AI alat za izradu i optimizaciju životopisa. Unesite podatke o svom karijernom putu, pustite AI da analizira vaš CV, dobijete konkretne sugestije za poboljšanje, ključne riječi za ATS sustave i optimizirani profesionalni sažetak, sve na jednoj platformi.",
           projects_ugradu_desc:
             "UGradu je mobilna aplikacija za otkrivanje lokalnih događanja u hrvatskim gradovima. Pregledavajte događanja, filtrirajte po gradu, spremajte favorite i primajte push obavijesti. Sadrži interaktivnu kartu s oznakama događanja i autentifikacijom korisnika. Izrađena s React Native, Expo, NativeWind i Firebase.",
 
